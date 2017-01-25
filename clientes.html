@@ -15,11 +15,42 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
 	
 
 </head>
 <body>
-<div class="container-fluid" style="padding-top: 20px">
+<!-- Barra de Navegação -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Som Quixadá</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="clientes.html"><i class="fa fa-users"></i> Clientes</a>
+                    </li>
+                    <li>
+                        <a onclick="toDvds()"><i class="fa fa-dot-circle-o"></i> DVDs</a>
+                    </li>
+                    <li>
+                        <a href="login.html"><i class="fa fa-sign-out"></i> Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+<div class="container" style="padding-top: 20px">
 	
 	<div id="msg-sucesso" style="display: none" class="alert alert-success alert-dismissable fade in">
 		<a href="#" class="close" onclick="esconderMsgSucesso()" aria-label="close">&times;</a>
@@ -140,8 +171,21 @@
    		 </tbody>
 	</table>
 
-	</div>
-
+	 <!-- Rodapé -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-7 float-left">
+                    <p>Todos os direitos reservados &copy; - Som Quixadá - 2017</p>
+                    <p>Josimar Junior - Luiz Jacó - Rafael Monteiro</p>
+                </div>
+                <div class="col-lg-5 float-right">
+                    <p><i class="fa fa-instagram" /></i> Instagram: <a href="https://instagram.com" target="_blank">instagram.com/som_quixada</a></p>
+                    <p><i class="fa fa-facebook" /></i> Facebook: <a href="https://facebook.com" target="_blank">facebook.com/som_quixada</a></p>
+                    <p><i class="fa fa-twitter" /></i> Twitter: <a href="https://twitter.com" target="_blank">twitter.com/som_quixada</a></p>
+                </div>
+            </div>
+        </footer>
+</div>
 	<script type="text/javascript">
 	
 		$(document).ready(function(){
