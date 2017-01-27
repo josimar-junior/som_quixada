@@ -11,7 +11,6 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- jjljrj -->
 </head>
 
 <body>
@@ -33,10 +32,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="clientes.html" "><i class="fa fa-users"></i> Clientes</a>
+                        <a href="clientes.html"><i class="fa fa-users"></i> Clientes</a>
                     </li>
                     <li>
-                        <a onclick="toDvds()"><i class="fa fa-dot-circle-o"></i> DVDs</a>
+                        <a href="dvds.html"><i class="fa fa-dot-circle-o"></i> DVDs</a>
                     </li>
                     <li>
                         <a href="login.html"><i class="fa fa-sign-out"></i> Logout</a>
@@ -54,7 +53,7 @@
       <header class="jumbotron hero-spacer">
           <h1><i class="fa fa-star"></i> Apresentação</h1>
           <p>A loja <strong>Som Quixadá</strong> é líder de vendas online no Sertão Central cearense. Aqui você encontra os últimos lançamentos dos maiores e melhores artistas nacionais e internacionais.</p>
-          <p><a class="btn btn-success-pet btn-large"><i class="fa fa-eye"></i> Ver produtos!</a>
+          <p><a href="dvds.html" class="btn btn-success-pet btn-large"><i class="fa fa-eye"></i> Ver produtos!</a>
           </p>
       </header>
 
@@ -71,58 +70,60 @@
       <div class="row text-center">
 
           <div class="col-md-3 col-sm-6 hero-feature">
-              <div class="thumbnail">
-                  <img src="images/limao.jpg" alt="">
-                  <div class="caption">
-                      <h3>Limão com Mel</h3>
-                      <p>Paixão x paixão</p>
-                      <p>
-                          <a href="#" class="btn btn-success-pet">Comprar!</a>
-                      </p>
-                  </div>
-              </div>
-          </div>
+                <div class="thumbnail">
+                    <img src="images/limao.jpg" alt="">
+                    <div class="caption">
+                        <h3>Limão com Mel</h3>
+                        <p>Paixão x paixão</p>
+                        <p>
+                            <label href="#" class="label label-primary label-preco">R$ 15,90</label>
+                            <a href="#" class="btn btn-success-pet">Comprar!</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-          <div class="col-md-3 col-sm-6 hero-feature">
-              <div class="thumbnail">
-                  <img src="images/lagosta.jpg" alt="">
-                  <div class="caption">
-                      <h3>Lagosta Bronzeada</h3>
-                      <p>O bronze do sucesso - ao vivo</p>
-                      <p>
-                          <a href="#" class="btn btn-success-pet">Comprar!</a>
-                      </p>
-                  </div>
-              </div>
-          </div>
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="images/lagosta.jpg" alt="">
+                    <div class="caption">
+                        <h3>Lagosta Bronzeada</h3>
+                        <p>O bronze do sucesso - ao vivo</p>
+                        <p>
+                            <label href="#" class="label label-primary label-preco">R$ 29,99</label>
+                            <a href="#" class="btn btn-success-pet">Comprar!</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-          <div class="col-md-3 col-sm-6 hero-feature">
-              <div class="thumbnail">
-                  <img src="images/zeze-2.jpg" alt="">
-                  <div class="caption">
-                      <h3>Zezé & Luciano</h3>
-                      <p>Sempre que eu respiro é por você</p>
-                      <p>
-                          <a href="#" class="btn btn-success-pet">Comprar!</a>
-                          <!-- <a href="#" class="btn btn-default">+ info</a> -->
-                      </p>
-                  </div>
-              </div>
-          </div>
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="images/zeze-2.jpg" alt="">
+                    <div class="caption">
+                        <h3>Zezé & Luciano</h3>
+                        <p>Duas horas de sucesso - ao vivo</p>
+                        <p>
+                            <label href="#" class="label label-primary label-preco">R$ 32,50</label>
+                            <a href="#" class="btn btn-success-pet">Comprar!</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-          <div class="col-md-3 col-sm-6 hero-feature">
-              <div class="thumbnail">
-                  <img src="images/ivete.jpg" alt="">
-                  <div class="caption">
-                      <h3>Ivete Sangalo</h3>
-                      <p>Ao vivo no Maraca</p>
-                      <p>
-                          <a href="#" class="btn btn-success-pet">Comprar!</a>
-                      </p>
-                  </div>
-              </div>
-          </div>
-
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="images/ivete.jpg" alt="">
+                    <div class="caption">
+                        <h3>Ivete Sangalo</h3>
+                        <p>Ao vivo no Maracanã</p>
+                        <p>
+                            <label href="#" class="label label-primary label-preco">R$ 29,90</label>
+                            <a href="#" class="btn btn-success-pet">Comprar!</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
       </div>
       <!-- /.row -->
 
@@ -137,62 +138,62 @@
       <!-- /.row -->
 
       <div class="media">
-          <div class="media-left">
-              <a href="#">
-                  <img class="media-object" src="images/zeze.jpg" alt="">
-              </a>
-          </div>
-          <div class="media-body">
-              <h4 class="media-heading borda-inferior"><strong style="color: #27897b">1º Lugar</strong></h4>
-              <p><i class="fa fa-user"></i><strong> Artista: </strong> Zezé Di Camargo & Luciano</p>
-              <p><i class="fa fa-window-maximize"></i><strong> Álbum: </strong> Sempre que eu respiro é por você</p>
-              <p><i class="fa fa-music"></i><strong> Música: </strong> Sufocado</p>
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="images/lagosta-2.jpg" alt="">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading borda-inferior"><strong style="color: #27897b">1º Lugar</strong></h4>
+                <p><i class="fa fa-user"></i><strong> Artista: </strong> Lagosta Bronzeada</p>
+                <p><i class="fa fa-window-maximize"></i><strong> Álbum: </strong> O bronze do sucesso - ao vivo</p>
+                <p><i class="fa fa-music"></i><strong> Música: </strong> Louca de saudade</p>
 
-              <audio controls>
-                        <source src="sounds/sufocado.mp3" type="audio/mpeg">
-              </audio>
-          </div>
-      </div>
-
-      <hr>
-
-      <div class="media">
-          <div class="media-left">
-              <a href="#">
-                  <img class="media-object" src="images/limao.jpg" alt="">
-              </a>
-          </div>
-          <div class="media-body">
-              <h4 class="media-heading borda-inferior"><strong style="color: #27897b">2º Lugar</strong></h4>
-              <p><i class="fa fa-user"></i><strong> Artista: </strong> Limão com Mel</p>
-              <p><i class="fa fa-window-maximize"></i><strong> Álbum: </strong> Paixão x paixão</p>
-              <p><i class="fa fa-music"></i><strong> Música: </strong> Paixão x paixão</p>
-
-              <audio controls>
-                        <source src="sounds/paixao-x-paixao.mp3" type="audio/mpeg">
-              </audio>
-          </div>
-      </div>
-
-      <hr>
-
-      <div class="media">
-          <div class="media-left">
-              <a href="#">
-                  <img class="media-object" src="images/lagosta-2.jpg" alt="">
-              </a>
-          </div>
-          <div class="media-body">
-              <h4 class="media-heading borda-inferior"><strong style="color: #27897b">3º Lugar</strong></h4>
-              <p><i class="fa fa-user"></i><strong> Artista: </strong> Lagosta Bronzeada</p>
-              <p><i class="fa fa-window-maximize"></i><strong> Álbum: </strong> O bronze do sucesso - ao vivo</p>
-              <p><i class="fa fa-music"></i><strong> Música: </strong> Louca de saudade</p>
-
-              <audio controls>
+                <audio controls>
                         <source src="sounds/louca-de-saudade.mp3" type="audio/mpeg">
               </audio>
-          </div>
-      </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="images/limao.jpg" alt="">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading borda-inferior"><strong style="color: #27897b">2º Lugar</strong></h4>
+                <p><i class="fa fa-user"></i><strong> Artista: </strong> Limão com Mel</p>
+                <p><i class="fa fa-window-maximize"></i><strong> Álbum: </strong> Paixão x paixão</p>
+                <p><i class="fa fa-music"></i><strong> Música: </strong> Paixão x paixão</p>
+
+                <audio controls>
+                        <source src="sounds/paixao-x-paixao.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="images/zeze.jpg" alt="">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading borda-inferior"><strong style="color: #27897b">3º Lugar</strong></h4>
+                <p><i class="fa fa-user"></i><strong> Artista: </strong> Zezé Di Camargo & Luciano</p>
+                <p><i class="fa fa-window-maximize"></i><strong> Álbum: </strong> Duas horas de sucesso - ao vivo</p>
+                <p><i class="fa fa-music"></i><strong> Música: </strong> Sufocado</p>
+
+                <audio controls>
+                        <source src="sounds/sufocado.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+        </div>
       <!-- /.row -->
 
         <hr>
@@ -220,7 +221,6 @@
 
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
-
 </body>
 
 </html>

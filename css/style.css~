@@ -48,12 +48,6 @@ h1 > i {
 	color: rgb(244, 222, 24);
 }
 
-.label-preco {
-	font-size: 1.4em;
-	float: left;
-	padding: .4em;
-}
-
 .float-left {
 	float: left;
 	text-align: left;

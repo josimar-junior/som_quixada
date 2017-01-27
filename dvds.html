@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html ng-app="dvds" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.maskMoney.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <title>:: DVDs | Som Quixadá ::</title>
+</head>
+
+<body>
+
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Som Quixadá</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="clientes.html"><i class="fa fa-users"></i> Clientes</a>
+                    </li>
+                    <li>
+                        <a href="dvds.html"><i class="fa fa-dot-circle-o"></i> DVDs</a>
+                    </li>
+                    <li>
+                        <a href="login.html"><i class="fa fa-sign-out"></i> Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+
+    <div class="container" ng-controller="dvdsController">
+		<form class="form-dvds" ng-submit="adicionarDVD()">
+			<br />
+
+			<div class="alert alert-success" role="alert" ng-show="message">
+				DVD adicionado com sucesso!
+			</div>
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Novo DVD
+				</div>
+				
+				<div class="panel-body">
+					<div class="form-group">
+		    			<label for="artista">Artista</label><label class="campo-obrigatorio"> *</label>
+		    			<input type="text" class="form-control" id="artista" ng-model="novoDVD.artista" required autocomplete>
+		  			</div>
+
+		  			<div class="form-group">
+		    			<label for="titulo">Título</label><label class="campo-obrigatorio"> *</label>
+		    			<input type="text" class="form-control" id="titulo" ng-model="novoDVD.titulo" required>
+		  			</div>
+
+		  			<div class="form-group">
+		    			<label for="faixas">N° de Faixas</label><label class="campo-obrigatorio"> *</label>
+		    			<input type="number" class="form-control" id="faixas" ng-model="novoDVD.faixas" maxlength="2" required>
+		  			</div>
+
+		  			<div class="form-group">
+		    			<label for="preco">Preço</label><label class="campo-obrigatorio"> *</label>
+		    			<input type="text" class="form-control" id="preco" maxlength="6" ng-model="novoDVD.preco" class="moeda" required>
+		  			</div>
+
+		  			<div class="form-group">
+		    			<label for="imagem">Imagem</label>
+		    			<input type="text" class="form-control" id="imagem"
+		    				ng-model="novoDVD.imagem">
+		  			</div>
+
+					<br/>
+					
+					<p>
+					  <button type="submit" class="btn btn-success-pet">Adicionar</button>
+					  <button type="reset" class="btn btn-warning">Limpar</button>
+					</p>
+				</div>
+			</div>
+		</form>
+		
+		<hr />
+
+		<div class="lista-dvds">
+			<div class="dvd" ng-repeat="dvd in dvds">
+				<h1>{{dvd.artista}}</h1>
+				<button class="del" title="Excluir" 
+					ng-click="removerDVD(dvd.id)"></button>
+				<img ng-if="dvd.imagem" ng-src="{{ dvd.imagem }}">
+				<img ng-if="!dvd.imagem" ng-src="{{ default }}">
+			
+				<ul>
+				    <li><strong>Título:</strong> {{ dvd.titulo }}</li>
+				    <li><strong>N° de faixas:</strong> {{ dvd.faixas }}</li>
+				</ul>
+
+				<br />
+				
+				<p>{{ dvd.preco | currency: "R$ ":2 }}</p>
+			</div>	
+		</div>
+
+		<hr>
+
+    	<!-- Rodapé -->
+    	<footer>
+        	<div class="row">
+            	<div class="col-lg-7 float-left">
+                	<p>Todos os direitos reservados &copy; - Som Quixadá - 2017</p>
+                	<p>Josimar Junior - Luiz Jacó - Rafael Monteiro</p>
+           		</div>
+            	<div class="col-lg-5 float-right">
+                	<p><i class="fa fa-instagram" /></i> Instagram: <a href="https://instagram.com" target="_blank">instagram.com/som_quixada</a></p>
+                	<p><i class="fa fa-facebook" /></i> Facebook: <a href="https://facebook.com" target="_blank">facebook.com/som_quixada</a></p>
+                	<p><i class="fa fa-twitter" /></i> Twitter: <a href="https://twitter.com" target="_blank">twitter.com/som_quixada</a></p>
+            	</div>
+        	</div>
+    	</footer>
+    </div>
+    <!-- /.container -->
+
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Angular JS -->
+    <script src="js/angular.min.js"></script>
+
+    <!-- Dvds Controller JS -->
+    <script src="js/dvdsController.js"></script>
+
+    <script type="text/javascript">
+		$(function() {
+			$("#preco").maskMoney({symbol:'R$ ', 
+			showSymbol:true, thousands:',', decimal:'.', symbolStay: true});
+		})
+	</script>
+</body>
+</html>
